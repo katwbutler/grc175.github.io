@@ -1,0 +1,358 @@
+/*
+Author: Katherine Butler
+Date: February 27, 2022
+File Name: mystyle.css
+*/
+
+/*Style rules for body and images*/
+body {
+    background-color:#fff;
+}
+
+h2 {
+    animation-duration: 8s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4) inset;
+    background: linlear gradient(to bottom, #fff 30%, #fcfcfc 40%, #f8f8f8 50%, #f0f0f0 100%);
+    border-radius: 7px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #b63b4b;
+    text-decoration: none;
+}
+
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    margin-bottom: 30px;
+}
+.accordion {
+    max-width: 384px;
+    width: 100%;
+    margin: 30px auto 20px;
+    background: white;
+    border-radius: 0;
+}
+
+.accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 42px;
+    color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+    border-bottom: 0;
+}
+
+.accordion li i {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #595959;
+    transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+    right: 12px;
+    left: auto;
+    font-size: 16px;
+}
+
+.accordion li.open .link{
+    color: #aa00ff;
+}
+
+.accordion li.open i {
+    color: #aa00ff;
+}
+
+.accordion li.open i.fa-chevron-down {
+    transition: rotate (180deg);
+}
+
+.submenu {
+    display: none;
+    font-size: 14px;
+}
+
+.submenu li {
+    border-bottom: 1px solid #4b4a5e;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 12px;
+    padding-left: 42px;
+    transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+    color: #fff;
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: 0%
+    }
+    
+    50% {
+        margin-left: 100px;
+    }
+    
+    100% {
+        margin-left: 0%;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.navbar-brand:hover{
+    color:aliceblue !important;
+}
+
+.btn-primary {
+    color: #191717;
+    background-color: #26db16;
+    box-shadow: 2px 2px #524b4b;
+    font-weight: bold;
+}
+
+.btn-primary: hover {
+    color:aliceblue !important;
+}
+
+.clearfix::after,
+.calendar ol::after {
+    content: ".";
+    clear: both;
+    visibility: hidden;
+}
+
+/* Calendar Styling */
+.calendar {
+    border-radius: 30px;
+}
+
+@media (min-width: 992px) {
+    .date {
+        font-size: 3.5rem;
+    }
+}
+
+.calendar ol li {
+    float: left;
+    width: 14.28571%;
+    text-align: center;
+}
+
+.calendar .day-names {
+    border-bottom: 1px solid #eee;
+}
+
+.calendar .day-names li {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.calendar .days li {
+    border-bottom: 1px solid #eee;
+    min-height: 8rem;
+}
+
+.calendar .days li .date {
+    margin: 0.5rem 0;
+}
+
+.calendar .days li .event {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 4rem;
+    margin-bottom: 1px;
+    background-color: #26db16;
+    font-weight: bold;
+}
+
+.calendar .days li .event.span-2 {
+    width: 200%;
+}
+
+.calendar .days li .event.begin {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.calendar .days li .event.end {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.calendar .days li .event.clear {
+    background: none;
+}
+
+.calendar .days li:nth-child(n+29) {
+    border-bottom: none;
+}
+
+.calendar .days li.outside .date {
+    color: #ddd;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    text-align: right;
+    background-color: #f9f9f9;
+    min-width: 160px;;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.bg-success {
+    background-color: #26db16;
+}
+
+.btn1 {
+    background-color: #26db16;
+    border: none;
+    color: #191717;
+    padding: 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4px 4px;
+    border-radius: 100%;
+}
+
+.btn1:hover{
+    color:aliceblue;
+}
+
+.btn2 {
+    background-color: #26db16;
+    border: none;
+    color: #191717;
+    padding: 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 100%;
+}
+
+.btn3 {
+    background-color: #26db16;
+    border: none;
+    color: #191717;
+    padding: 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 100%;
+}
+
+.btn4 {
+    background-color: #26db16;
+    border: none;
+    color: #191717;
+    padding: 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 100%;
+}
+
+.btn5 {
+    background-color: #26db16;
+    border: none;
+    color: #191717;
+    padding: 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 100%;
+}
+
+.def-number-input {
+    display: inline-flex;
+    width: 80px;
+    height: 30px;
+    background-color: #9f9f9f;
+    &, & * {
+        box-sizing: border-box;
+    }
+}
+
+#etkylOI1JMj1{
+    width: 400px;
+}
+
+/* Social Media buttons */
+.fa {
+  padding: 7px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Hover Buttons */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+} 
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
